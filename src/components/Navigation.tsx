@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useWallet } from '@/contexts/WalletContext';
 import { Wallet, Home, Grid3x3, Sparkles } from 'lucide-react';
+import vatikaLogo from '@/assets/vatika-logo.jpg';
 
 export const Navigation = () => {
   const { account, connectWallet, disconnectWallet, isConnecting } = useWallet();
@@ -16,10 +17,8 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-[var(--glow-primary)]">
-              <Grid3x3 className="w-6 h-6 text-foreground" />
-            </div>
-            <span className="text-xl font-bold gradient-text">3D NFT Viewer</span>
+            <img src={vatikaLogo} alt="Vatika Logo" className="w-10 h-10 rounded-lg object-contain" />
+            <span className="text-xl font-bold gradient-text">Vatika</span>
           </Link>
 
           <div className="flex items-center gap-4">
