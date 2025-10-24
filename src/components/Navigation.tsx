@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useWallet } from '@/contexts/WalletContext';
-import { Wallet, Home, Grid3x3 } from 'lucide-react';
+import { Wallet, Home, Grid3x3, Sparkles } from 'lucide-react';
 
 export const Navigation = () => {
   const { account, connectWallet, disconnectWallet, isConnecting } = useWallet();
@@ -30,6 +30,16 @@ export const Navigation = () => {
               >
                 <Home className="w-4 h-4" />
                 Home
+              </Button>
+            </Link>
+
+            <Link to="/examples">
+              <Button 
+                variant={location.pathname === '/examples' ? 'default' : 'ghost'}
+                size="sm"
+              >
+                <Sparkles className="w-4 h-4" />
+                Examples
               </Button>
             </Link>
 
