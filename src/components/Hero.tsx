@@ -83,6 +83,7 @@ export const Hero = () => {
             <Button 
               variant="glass" 
               size="lg"
+              onClick={() => navigate('/examples')}
               className="min-w-[200px]"
             >
               <Eye className="w-5 h-5" />
